@@ -1,0 +1,213 @@
+.card-stock {
+  border: 1px solid #e2e4ef;
+  border-radius: 10px;
+  padding: 40px 27px;
+  min-width: 278px;
+
+  @media only screen and (max-width: 1200px) {
+    margin-left: 20px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    padding: 20px;
+  }
+
+  @media only screen and (max-width: 575px) {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  button {
+    margin: 0 auto;
+    margin-top: 20px;
+
+    @media only screen and (max-width: 1200px) {
+      padding: 20px 25px;
+    }
+  }
+}
+
+.card-stock__price-old {
+  text-align: center;
+  font-size: 14px;
+  line-height: 19px;
+  color: #b3b5bf;
+  text-decoration: line-through;
+  margin: 0;
+
+  span {
+    font-weight: 300;
+    font-size: 12px;
+    margin-left: 2px;
+  }
+}
+
+.card-stock__price {
+  text-align: center;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 49px;
+  margin: 0;
+
+  span {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 38px;
+    color: #7c808e;
+    margin-left: 6px;
+  }
+}
+
+.card-stock__action {
+  &-item {
+    a {
+      font-size: 13px;
+      line-height: 18px;
+      color: #363845;
+      position: relative;
+    }
+
+    span {
+      width: 100%;
+      height: 1px;
+      left: 0;
+      bottom: -3px;
+      position: absolute;
+      background: #e2e4ee;
+    }
+
+    a:hover {
+      color: #ed1651;
+
+      span {
+        background: #ed1651;
+      }
+    }
+
+    svg {
+      margin-right: 12px;
+    }
+  }
+}
+
+.card-stock__social {
+  &-element {
+    margin-right: 8px;
+
+    img {
+      width: 30px;
+    }
+  }
+
+  &-element:last-child {
+    margin-right: 0;
+  }
+}
+
+.card {
+  max-width: 238px;
+  width: 100%;
+  padding-bottom: 30px;
+
+  @media only screen and (max-width: 575px) {
+    max-width: 100%;
+  }
+
+  &-image {
+    height: 190px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  &-title {
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  &-main {
+    margin-top: 18px;
+  }
+
+  &-main__rating {
+    p {
+      font-size: 12px;
+      line-height: 16px;
+      color: #7c808e;
+      margin-top: 6px;
+      text-decoration: underline;
+    }
+  }
+
+  &-main__price {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 30px;
+
+    span {
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 38px;
+      color: #7c808e;
+      margin-left: 3px;
+    }
+  }
+
+  &-actions {
+    margin-top: 25px;
+
+    .btn {
+      padding: 16px 35px;
+      box-shadow: none;
+    }
+
+    .btn-pink {
+      @media only screen and (max-width: 1200px) {
+        padding: 16px 25px;
+      }
+    }
+
+    .btn-circle {
+      margin-left: 6px;
+    }
+  }
+}
+
+.card-brand {
+  min-height: 93px;
+  border: 1px solid #e2e4ee;
+  border-radius: 10px;
+  padding: 24px 28px;
+
+  @media only screen and (max-width: 991px) {
+    padding: 12px;
+  }
+
+  a {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: #363845;
+
+    @media only screen and (max-width: 575px) {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+
+  a:hover {
+    text-decoration: underline;
+    color: #363845;
+  }
+}

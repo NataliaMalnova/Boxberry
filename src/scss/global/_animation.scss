@@ -1,0 +1,47 @@
+@-webkit-keyframes scale {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50%,
+  75% {
+    -webkit-transform: scale(2.5);
+    transform: scale(2.5);
+  }
+  100%,
+  78% {
+    opacity: 0;
+  }
+}
+
+@keyframes scale {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50%,
+  75% {
+    -webkit-transform: scale(2.5);
+    transform: scale(2.5);
+  }
+  100%,
+  78% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes os-resize-observer-dummy-animation {
+  0% {
+    z-index: 0;
+  }
+  to {
+    z-index: -1;
+  }
+}
+@keyframes os-resize-observer-dummy-animation {
+  0% {
+    z-index: 0;
+  }
+  to {
+    z-index: -1;
+  }
+}

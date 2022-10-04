@@ -1,0 +1,108 @@
+include ../../blocks/card/card.pug
+.product-similar
+    .container
+        .row 
+            .col-lg-6
+                .similar__slider
+                    .slider-basic__top.d-flex.align-items-center.justify-content-between
+                        h3 Похожие товары
+                        .slider-basic__line &nbsp;
+                        .slider-basic__nav.d-flex.align-items-center
+                            .swiper-button-prev.flex-center
+                                i.icon-arrow-left
+                            .swiper-button-next.flex-center
+                                i.icon-arrow-right
+                    .swiper-container
+                        .swiper-wrapper
+                            .swiper-slide
+                                +card({})
+                            .swiper-slide 
+                                +card({})
+                            .swiper-slide 
+                                +card({})
+                            .swiper-slide 
+                                +card({})
+                            .swiper-slide 
+                                +card({})
+            .col-lg-6
+                .like__slider
+                    .slider-basic__top.d-flex.align-items-center.justify-content-between
+                        h3 С этим товаром покупают
+                        .slider-basic__line &nbsp;
+                        .slider-basic__nav.d-flex.align-items-center
+                            .swiper-button-prev.flex-center
+                                i.icon-arrow-left
+                            .swiper-button-next.flex-center
+                                i.icon-arrow-right
+                    .swiper-container
+                        .swiper-wrapper
+                            .swiper-slide
+                                +card({})
+                            .swiper-slide 
+                                +card({})
+                            .swiper-slide 
+                                +card({})
+                            .swiper-slide 
+                                +card({})
+                            .swiper-slide 
+                                +card({})
+            .col-lg-12
+                .top__slider
+                    .slider-basic__top.d-flex.align-items-center.justify-content-between
+                        h3 Топ самых популярных товаров недели
+                        .slider-basic__line &nbsp;
+                        .slider-basic__nav.d-flex.align-items-center
+                            .swiper-button-prev.flex-center
+                                i.icon-arrow-left
+                            .swiper-button-next.flex-center
+                                i.icon-arrow-right
+                    .swiper-container
+                        .swiper-wrapper
+                            .swiper-slide
+                                +card({})
+                            .swiper-slide 
+                                +card({})
+                            .swiper-slide 
+                                +card({})
+                            .swiper-slide 
+                                +card({})
+                            .swiper-slide 
+                                +card({})
+            .col-lg-12
+                .tovar__slider
+                    .slider-basic__top.d-flex.align-items-center.justify-content-between
+                        h3 Телевизоры Sony
+                        .slider-basic__line &nbsp;
+                        .slider-basic__nav.d-flex.align-items-center
+                            .swiper-button-prev.flex-center
+                                i.icon-arrow-left
+                            .swiper-button-next.flex-center
+                                i.icon-arrow-right
+                    .swiper-container
+                        .swiper-wrapper
+                            .swiper-slide
+                                +card({})
+                            .swiper-slide 
+                                +card({})
+                            .swiper-slide 
+                                +card({})
+                            .swiper-slide 
+                                +card({})
+                            .swiper-slide 
+                                +card({})
+            .col-lg-12
+                .brand__slider
+                    .slider-basic__top.d-flex.align-items-center.justify-content-between
+                        h3 Бренды
+                        .slider-basic__line &nbsp;
+                        .slider-basic__nav.d-flex.align-items-center
+                            .swiper-button-prev.flex-center
+                                i.icon-arrow-left
+                            .swiper-button-next.flex-center
+                                i.icon-arrow-right
+                    .swiper-container
+                        .swiper-wrapper.grid-container
+                            - for(let i = 0; i < 15; i++)
+                                .swiper-slide
+                                    .card-brand.flex-center
+                                        a(href="") Телевизоры Philips

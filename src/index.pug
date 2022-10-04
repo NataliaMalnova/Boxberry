@@ -1,0 +1,20 @@
+
+include components/structure-page/main.pug
+include components/blocks/breadcrumbs/breadcrumbs.pug
+include components/blocks/overlay/overlay-favorites.pug
+
++main-structure-top()
+
++breadcrumbs({ links: ["/market/", "/market/category/elektronika/", "/market/category/audio--i-videotehnika/", "/market/category/televizory/"], 
+		title: ['Главная', 'Электроника', 'Аудио- и видеотехника', 'Телевизоры']
+		})
+include components/pages/product/product.pug
+include components/pages/product/product-list.pug
+include components/pages/product/product-description.pug
+include components/pages/product/product-charact.pug
+include components/blocks/reviews/reviews.pug
+include components/blocks/form/form.pug
+include components/pages/product/similar.pug
+
++main-structure-bottom()
++modalFavorites()

@@ -1,0 +1,67 @@
+include ../../blocks/tooltip/tooltip.pug
+include ../../blocks/card/card-stock.pug
+.product
+    .container 
+        .row.d-flex
+            .col-lg-12
+                .product__head
+                    h1.product__title Телевизор Sony KD-50X81J, 
+                        span 50", 4K, LED
+                    .sale.product__sale -10%
+                .product__options.d-flex
+                    .product__option.d-flex.align-items-center
+                        .stars.d-flex.align-items-center
+                            - for(let i = 0; i < 4; i++)
+                                .star
+                                    <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.07789 12.6254L4.0743 15.4262L5.19165 9.8019L0.981201 5.90857L6.67577 5.23319L9.07789 0.026001L11.48 5.23319L17.1746 5.90857L12.9641 9.8019L14.0815 15.4262L9.07789 12.6254Z" fill="#E5EACB"/>
+                                    </svg>
+                                    .star-dark(style="width: 100%")
+                                        <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8.20167 12.9542L3.19808 15.755L4.31543 10.1306L0.10498 6.2373L5.79955 5.56193L8.20167 0.354736L10.6038 5.56193L16.2984 6.2373L12.0879 10.1306L13.2053 15.755L8.20167 12.9542Z" fill="url(#paint0_linear_38_72)"/>
+                                            <defs>
+                                            <linearGradient id="paint0_linear_38_72" x1="8.20167" y1="0.354736" x2="8.20167" y2="15.755" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#C8E333"/>
+                                            <stop offset="1" stop-color="#B4D01A"/>
+                                            </linearGradient>
+                                            </defs>
+                                        </svg>
+                            .star
+                                <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.07789 12.6254L4.0743 15.4262L5.19165 9.8019L0.981201 5.90857L6.67577 5.23319L9.07789 0.026001L11.48 5.23319L17.1746 5.90857L12.9641 9.8019L14.0815 15.4262L9.07789 12.6254Z" fill="#E5EACB"/>
+                                </svg>
+                                .star-dark(style="width: 40%")
+                                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.20167 12.9542L3.19808 15.755L4.31543 10.1306L0.10498 6.2373L5.79955 5.56193L8.20167 0.354736L10.6038 5.56193L16.2984 6.2373L12.0879 10.1306L13.2053 15.755L8.20167 12.9542Z" fill="url(#paint0_linear_38_72)"/>
+                                        <defs>
+                                        <linearGradient id="paint0_linear_38_72" x1="8.20167" y1="0.354736" x2="8.20167" y2="15.755" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#C8E333"/>
+                                        <stop offset="1" stop-color="#B4D01A"/>
+                                        </linearGradient>
+                                        </defs>
+                                    </svg>
+                        a(href="#_reviews") 22 отзыва
+                    .product__option.d-flex.align-items-center
+                        a(href="#_characteristics") Характеристики
+            .col-lg-12.d-flex.justify-content-between.mt-40.product-row
+                .product__item
+                    include ../../blocks/slider/product.pug
+                .product__left.d-flex.justify-content-between
+                    .product__characteristics
+                        ul.ul-basic
+                            li Цвет:
+                                span черный 
+                                +tooltip({})
+                            li Диагональ:
+                                span 48.5" 
+                                +tooltip({})
+                            li Разрешение:
+                                span hd4k uhd 3840x2160 
+                                +tooltip({})
+                            li Форматы:
+                                span hdr, hdr10, dolby vision 
+                                +tooltip({})
+                        .product__option-20.product__option.d-flex.align-items-center.mt-40
+                            a(href="#_characteristics") Все характеристики
+                    .product__card
+                        +card-stock({})

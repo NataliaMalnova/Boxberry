@@ -1,0 +1,121 @@
+include ../../image/compare.pug
+include ../../image/favorites.pug
+
+header.head
+  .container
+    .row
+      .col-12
+        .head__line.flex-ai-center.justify-content-between
+          a(href="/market/").logo.head__logo
+            img(src="images/market/Boxberry_logo.png", alt="Boxberry Каталог").img-responsive
+          .head__catalog.flex-ai-center
+            button.mobile__icon.mobile__icon--tablet(type="button")
+              span
+            p Каталог товаров
+          .head__actions.flex-ai-center
+            .head__actions-item.d-flex
+              .head__actions-image.d-flex
+                +image-compare({})
+                .head__actions-count.flex-center
+                  p 1
+              p.head__actions-title Сравнение
+            .head__actions-item.d-flex(data-show-modal="overlay__favorites")
+              .head__actions-image.d-flex 
+                +image-favorites({})
+                .head__actions-count.flex-center
+                  p 1
+              p.head__actions-title Избранное
+
+          .search
+            .search__wrap
+              i.icon-search 
+              form(action="/market/site/search/" method="GET") 
+                input(type="text" name="name" value="" placeholder="наушники эйр подс").search__input
+                .form-group
+                  button(type="submit").search__button хочу! 
+            ul.search__list
+              li.search__item
+                a(href="/market/category/parogeneratory/").sub__link Парогенераторы
+              li.search__item 
+                a(href="/market/category/zhenschinam-odezhda-platya-i-sarafany/").sub__link Платье
+              li.search__item
+                a(href="/market/category/muzhchinam-odezhda-dzhinsy/").sub__link Джинсы
+              li.search__item
+                a(href="/market/category/muzhchinam-odezhda-futbolki-i-polo/").sub__link Футболки
+              li.search__item
+                a(href="/market/category/knigi/").sub__link Книги
+          .mobile.d-sm-none.flex-ai-center.head__catalog-mobile
+            p Каталог товаров
+            button.mobile__icon(type="button") 
+              span
+  .head__btn-up
+nav.cat
+  .container
+    .row
+      .col-12
+        .cat__left(style="display: none;")
+          .cat__wrap
+            .cat__title Категории
+            a(href="/market/brands/").cat__all бренды &gt;&gt;
+          ul.cat__list#root-menu(data-url="/market/category/ajax-sub-categories/" data-csrf-token="Qee64_lts5HYtr5urd6Y-UaDpjJMEOGyZg6PfLauB0YAqdKCg1X1yLDe2x7v6qvIJcqRbQh6rPpRYtwN-sJKPw==")
+            li.cat__item.has-sub(data-category-id="15")
+              a(href="" tabindex="0").cat__link
+                i.icon-man
+                | Для мужчин
+            li.cat__item.has-sub(data-category-id="16")
+              a(href="" tabindex="0").cat__link
+                i.icon-woman
+                | Для женщин
+            li.cat__item.has-sub(data-category-id="277")
+              a(href="" tabindex="0").cat__link
+                i.icon-baby
+                | Одежда для детей
+            li.cat__item.has-sub(data-category-id="284")
+              a(href="" tabindex="0").cat__link
+                i.icon-byt
+                | Бытовая техника
+            li.cat__item.has-sub(data-category-id="487")
+              a(href="" tabindex="0").cat__link
+                i.icon-computer
+                | Компьютерная техника
+            li.cat__item.has-sub(data-category-id="287")
+              a(href="" tabindex="0").cat__link
+                i.icon-phone
+                | Электроника
+            li.cat__item.has-sub(data-category-id="2008")
+              a(href="" tabindex="0").cat__link
+                i.icon-home
+                | Товары для дома
+            li.cat__item.has-sub(data-category-id="1639")
+              a(href="" tabindex="0").cat__link
+                i.icon-toys
+                | Детские товары
+            li.cat__item.has-sub(data-category-id="285")
+              a(href="" tabindex="0").cat__link
+                i.icon-car
+                | Автотовары
+            li.cat__item.has-sub(data-category-id="286")
+              a(href="" tabindex="0").cat__link
+                i.icon-zoo
+                | Зоотовары
+            li.cat__item.has-sub(data-category-id="72")
+              a(href="" tabindex="0").cat__link
+                i.icon-build
+                | Строительство и ремонт
+            li.cat__item.has-sub(data-category-id="482")
+              a(href="" tabindex="0").cat__link
+                i.icon-eye-makeup
+                | Красота и здоровье
+            li.cat__item.has-sub(data-category-id="484")
+              a(href="" tabindex="0").cat__link
+                i.icon-sport
+                | Спорт и отдых
+            li.cat__item.has-sub(data-category-id="485")
+              a(href="" tabindex="0").cat__link
+                i.icon-book
+                | Книги
+            li.cat__item.has-sub(data-category-id="488")
+              a(href="" tabindex="0").cat__link
+                i.icon-products
+                | Продукты
+          ul.cat__sub(style="display: none;")

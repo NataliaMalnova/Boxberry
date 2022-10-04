@@ -1,0 +1,41 @@
+mixin card({})
+    .card
+        .card-image
+            img(src="images/product/product-1.png", alt="product")
+        p.card-title Телевизор Haier 43 Smart MX
+        .card-main.d-flex.justify-content-between.align-items-center   
+            .card-main__rating
+                .stars.d-flex.align-items-center
+                    - for(let i = 0; i < 5; i++)
+                        .star
+                            <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.07789 12.6254L4.0743 15.4262L5.19165 9.8019L0.981201 5.90857L6.67577 5.23319L9.07789 0.026001L11.48 5.23319L17.1746 5.90857L12.9641 9.8019L14.0815 15.4262L9.07789 12.6254Z" fill="#E5EACB"/>
+                            </svg>
+                            .star-dark(style="width: 100%")
+                                <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.20167 12.9542L3.19808 15.755L4.31543 10.1306L0.10498 6.2373L5.79955 5.56193L8.20167 0.354736L10.6038 5.56193L16.2984 6.2373L12.0879 10.1306L13.2053 15.755L8.20167 12.9542Z" fill="url(#paint0_linear_38_72)"/>
+                                    <defs>
+                                    <linearGradient id="paint0_linear_38_72" x1="8.20167" y1="0.354736" x2="8.20167" y2="15.755" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#C8E333"/>
+                                    <stop offset="1" stop-color="#B4D01A"/>
+                                    </linearGradient>
+                                    </defs>
+                                </svg>
+                p 3 отзыва
+            .card-main__price 82 690
+                span ₽
+        .card-actions.d-flex.justify-content-between.align-items-center   
+            button.btn-pink.btn.btn-pink-green Купить 
+            div.d-flex
+                button.btn-circle.flex-center
+                    <svg width="13" height="18" viewBox="0 0 13 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="1.85714" height="17.6429" fill="#B3B5BF"/>
+                        <rect x="3.71429" y="4.64307" width="1.85714" height="13" fill="#B3B5BF"/>
+                        <rect x="11.1428" y="11.1431" width="1.85714" height="6.5" fill="#B3B5BF"/>
+                        <rect x="7.42859" y="2.78564" width="1.85714" height="14.8571" fill="#B3B5BF"/>
+                    </svg>
+                button.btn-circle.flex-center
+                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.05 0C15.7842 0 18 2.25 18 5.4C18 11.7 11.25 15.3 9 16.65C6.75 15.3 0 11.7 0 5.4C0 2.25 2.25 0 4.95 0C6.624 0 8.1 0.9 9 1.8C9.9 0.9 11.376 0 13.05 0ZM9.8406 14.0436C10.6335 13.5432 11.349 13.0455 12.0186 12.5127C14.7015 10.3797 16.2 8.0487 16.2 5.4C16.2 3.276 14.8167 1.8 13.05 1.8C12.0816 1.8 11.034 2.313 10.2726 3.0726L9 4.3452L7.7274 3.0726C6.966 2.313 5.9184 1.8 4.95 1.8C3.204 1.8 1.8 3.2904 1.8 5.4C1.8 8.0496 3.2994 10.3797 5.9805 12.5127C6.651 13.0455 7.3665 13.5432 8.1594 14.0427C8.4285 14.2128 8.6949 14.3757 9 14.5575C9.3051 14.3757 9.5715 14.2128 9.8406 14.0436Z" fill="#B3B5BF"/>
+                    </svg>
+

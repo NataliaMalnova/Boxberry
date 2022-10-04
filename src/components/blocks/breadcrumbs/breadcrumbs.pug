@@ -1,0 +1,13 @@
+mixin breadcrumbs({links = [], title = []})
+    nav.breadcrumb
+        .container.breadcrumb-container
+            .row
+                .col-12
+                    button.breadcrumb__btn-back(type="button")
+                        a(href="").breadcrumb__link ← Назад
+                    button.mobile__breadcrumb.d-flex.d-sm-none(type="button")
+                        i.icon-arrow-right
+                    ol.breadcrumb__list
+                        each key, index in links
+                            li.breadcrumb__item
+                                a(href= key).breadcrumb__link= title[index]

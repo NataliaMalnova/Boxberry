@@ -1,0 +1,40 @@
+include ../assessment/assessment.pug
+
+.product-form 
+    .container
+        h2 Оставить отзыв о товаре
+        +assessment({title: 'Общая оценка', name: 'assessment-reviews'})
+        form.form-basic
+            .form-row.d-flex.justify-content-between
+                each key in [["Достоинства", "Что вам понравилось"], ["Недостатки", "Что вам не понравилось"], ["Комментарий", "Другие впечатления"]]
+                    .form-col
+                        .form-basic__wrap
+                            label=key[0]
+                            textarea.form-basic__input.d-flex.align-items-center(
+                                placeholder=key[1]
+                                data-textarea=""
+                            )
+            .form-row.d-flex.justify-content-between
+                each key in [["Имя", "Введите ваше имя", "text"], ["E-mail", "Ваш e-mail", "email"]]
+                    .form-col
+                        .form-basic__wrap
+                            label=key[0]
+                            input.form-basic__input.d-flex.align-items-center(type=key[1] placeholder=key[0] required="")
+                .form-col
+                    fieldset
+                        legend Добавьте фото
+                        input(type="hidden" id="MAX_FILE_SIZE" name="MAX_FILE_SIZE" value="300000")
+                    .form-upload.d-flex.align-items-center
+                        input(type="file" id="fileselect" name="fileselect[]" multiple="multiple")
+                        #filedrag.d-flex.align-items-center
+                            <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13 18.333C15.2091 18.333 17 16.5421 17 14.333C17 12.1239 15.2091 10.333 13 10.333C10.7909 10.333 9 12.1239 9 14.333C9 16.5421 10.7909 18.333 13 18.333Z" stroke="#ED1651" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M3.66667 6.33301H6.33333C7.04058 6.33301 7.71885 6.05206 8.21895 5.55196C8.71905 5.05186 9 4.37359 9 3.66634C9 3.31272 9.14048 2.97358 9.39052 2.72353C9.64057 2.47348 9.97971 2.33301 10.3333 2.33301H13M25 11.6663V20.9997C25 21.7069 24.719 22.3852 24.219 22.8853C23.7189 23.3854 23.0406 23.6663 22.3333 23.6663H3.66667C2.95942 23.6663 2.28115 23.3854 1.78105 22.8853C1.28095 22.3852 1 21.7069 1 20.9997V8.99967C1 8.29243 1.28095 7.61415 1.78105 7.11406C2.28115 6.61396 2.95942 6.33301 3.66667 6.33301" stroke="#ED1651" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M17 4.99951H25" stroke="#ED1651" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M21.0001 1V9" stroke="#ED1651" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            p 
+                                span Нажмите на ссылку&nbsp;
+                                | или перетащите фото сюда
+                    #messages
+            button.btn-pink.btn Отправить  

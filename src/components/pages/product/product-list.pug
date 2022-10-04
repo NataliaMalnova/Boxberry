@@ -1,0 +1,17 @@
+.product-list
+    .container 
+        .row.d-flex
+            .col-lg-12
+                h2 Все предложения
+            .col-lg-12
+                .product-list__table
+                    - for(let i = 0; i < 3; i++)
+                        .product-list__row.d-flex.justify-content-between.align-items-center
+                            .product-list__title.d-flex.align-items-center
+                                .product-list__image
+                                    img(src="images/product/product-1.png", alt="product")
+                                p Технопарк
+                            .product-list__price.d-flex.align-items-center
+                                p 65 690
+                                    span ₽
+                                button.btn-pink.btn-pink-green Купить

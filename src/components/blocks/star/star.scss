@@ -1,0 +1,15 @@
+.stars {
+  margin-right: 8px;
+}
+
+.star {
+  position: relative;
+}
+
+.star-dark {
+  overflow: hidden;
+  position: absolute;
+  width: 0%;
+  top: 0;
+  left: 0;
+}

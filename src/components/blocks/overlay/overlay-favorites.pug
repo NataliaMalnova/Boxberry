@@ -1,0 +1,15 @@
+include ../favorites/favorites.pug
+mixin modalFavorites()
+    .overlay.overlay--favorites#overlay__favorites
+        .overlay-wrap
+            .overlay-wrap__top.flex-ai-center.justify-content-between
+                h3 Избранное
+                    span.sub-title 3
+                .overlay--close.d-f
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.414062" y="18" width="25" height="2" rx="1" transform="rotate(-45 0.414062 18)" fill="black"/>
+                        <rect x="1.41431" width="25" height="2" rx="1" transform="rotate(45 1.41431 0)" fill="black"/>
+                    </svg>
+            .overlay-wrap__content
+                - for(let i = 0; i < 15; i++)
+                    +favorites({})

@@ -1,0 +1,154 @@
+.form-row {
+  flex-wrap: wrap;
+
+  &:not(:first-child) {
+    margin-top: 30px;
+
+    @media only screen and (max-width: 991px) {
+      margin-top: 0px;
+    }
+  }
+}
+
+.form-col {
+  width: calc(33.33% - 18px);
+
+  @media only screen and (max-width: 991px) {
+    width: 100%;
+  }
+}
+
+.form-basic {
+  .btn {
+    padding: 20px 60px;
+    margin-top: 40px;
+
+    @media only screen and (max-width: 991px) {
+      margin-top: 20px;
+    }
+
+    @media only screen and (max-width: 991px) {
+      width: 100%;
+      text-align: center;
+      justify-content: center;
+    }
+  }
+  &__wrap {
+    @media only screen and (max-width: 991px) {
+      margin-bottom: 12px;
+    }
+
+    label {
+      font-size: 14px;
+      line-height: 19px;
+      margin-bottom: 13px;
+    }
+  }
+  &__input {
+    width: 100%;
+    background: transparent;
+    border: 1px solid #e2e4ee;
+    border-radius: 10px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.425;
+    height: 62px;
+    resize: none;
+    padding-left: 18px;
+    padding-right: 18px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    height: 45px;
+
+    &::placeholder {
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 18px;
+      color: #b3b5bf;
+      height: 45px;
+    }
+
+    &:focus,
+    &:focus,
+    &:focus {
+      border: 1px solid #b4e6a3;
+    }
+  }
+
+  textarea {
+    padding: 8px 18px;
+    height: 70px;
+    left: 351px;
+    top: 3827px;
+  }
+
+  &__ui-button {
+    margin: 0 auto;
+    margin-top: 10px;
+    text-transform: uppercase;
+    padding-left: 21px;
+    padding-right: 21px;
+  }
+}
+
+.form-basic__filter {
+  background: transparent;
+  border: 1px solid #dcdcdc;
+  border-radius: 9px;
+  font-size: 16px;
+  font-weight: 400;
+  height: 62px;
+  line-height: 1.425;
+  margin-bottom: 20px;
+  resize: none;
+  width: 100%;
+}
+
+.form-basic legend {
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  margin-bottom: 13px;
+}
+
+.form-upload {
+  position: relative;
+  cursor: pointer;
+  height: 45px;
+
+  svg {
+    margin-right: 17px;
+  }
+
+  input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  input[type="file"],
+  input[type="file"]::-webkit-file-upload-button {
+    cursor: pointer;
+  }
+
+  #filedrag {
+    font-size: 13px;
+    line-height: 18px;
+    color: #7c808e;
+
+    span {
+      color: #ed1651;
+    }
+  }
+}
+
+#messages p {
+  border-bottom: 1px solid #efefef;
+  margin-bottom: 5px;
+  padding: 10px;
+  font-size: 14px;
+}

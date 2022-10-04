@@ -1,0 +1,22 @@
+include ../../blocks/tooltip/tooltip.pug
+.product-charact#_characteristics
+    .container 
+        .row.d-flex
+            .col-lg-12
+                h2 Характеристики
+            .col-lg-6
+                ul.product-charact__list 
+                    each key, index in [['Гарантия', '1 год'], ['Страна', 'Малайзия'], ['Срок службы', '5 лет', true], ['Серия', 'X81J'], ['Обратите внимание', 'Фирменный процессор 4K HDR X1'], ['Удачное решение', 'Цветовой охват TRILUMINOS PRO'], ['Важная особенность', 'Поддержка Dolby Vision / Atmos', true], ['Пользователи оценят', 'Динамик X-Balanced Speaker'], ['Хорошо придумано', 'Google TV c поддержкой AirPlay2'], ['Диагональ', '50"']]
+                        li
+                            span.product-charact__list-title= key[0]
+                                if key[2] == true 
+                                    +tooltip({})
+                            span.product-charact__list-text= key[1]
+            .col-lg-6
+                ul.product-charact__list 
+                    each key, index in [['Диагональ экрана', '126 см'], ['Ultra HD', 'Да', true], ['Экран', '50"/3840x2160 Пикс', true], ['Тип технологии HDR', 'HDR10,HLG,Dolby Vision'], ['Частота обновления', '60 Гц'], ['Формат экрана', '16:9'], ['Технология экрана', 'TRILUMINOS PRO'], ['Масштабирование до 4K Ultra HD', 'Да'], ['Цифровое шумоподавление', 'Да'], ['Значение интерполяции', '240']]
+                        li
+                            span.product-charact__list-title= key[0]
+                                if key[2] == true 
+                                    +tooltip({})
+                            span.product-charact__list-text= key[1]

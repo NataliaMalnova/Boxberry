@@ -1,0 +1,135 @@
+.breadcrumb {
+  padding: 10px 0;
+
+  @media (max-width: 1200px) {
+    margin: 5px 0 0;
+  }
+}
+
+.breadcrumb-container {
+  padding-top: 38px;
+  border-top: 1px solid #e2e4ef;
+}
+
+.breadcrumb__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @media (max-width: 1200px) {
+    position: absolute;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background: #f1f1f1;
+    z-index: 99;
+    top: 27px;
+    border-radius: 0 0 5px 5px;
+    left: 0;
+    visibility: hidden;
+    padding: 15px 0;
+  }
+}
+
+.breadcrumb__item {
+  margin-right: 38px;
+  position: relative;
+  line-height: 1;
+  margin-bottom: 5px;
+
+  @media (max-width: 1200px) {
+    margin: 10px 0 0;
+  }
+
+  @media (max-width: 575px) {
+    margin-right: 0;
+  }
+}
+
+.breadcrumb__item::before {
+  content: "";
+  position: absolute;
+  right: -19px;
+  top: 54%;
+  transform: translateY(-50%);
+  background-color: #ced1db;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+}
+
+.breadcrumb__item:last-child::before {
+  display: none;
+}
+
+.breadcrumb__item:first-child {
+  @media (max-width: 1200px) {
+    margin: 0;
+  }
+}
+
+.breadcrumb__link {
+  font-size: 13px;
+  line-height: 18px;
+  color: #7c808e;
+
+  &:hover {
+    color: #363845;
+    text-decoration: underline;
+  }
+}
+
+.breadcrumb__link:active,
+.breadcrumb__link:focus {
+  color: #7c808e;
+}
+
+.breadcrumb__link i {
+  margin-right: 8px;
+  position: relative;
+  top: 2px;
+}
+
+.breadcrumb__item.breadcrumb__active,
+.breadcrumb__link {
+  @media (max-width: 1200px) {
+    line-height: 1.4;
+  }
+
+  @media (max-width: 575px) {
+    line-height: 1.4;
+  }
+}
+
+.breadcrumb__btn-back {
+  position: absolute;
+  top: -5px;
+  display: none;
+
+  @media (max-width: 1200px) {
+    display: block;
+  }
+}
+
+.mobile__breadcrumb {
+  font-size: 14px;
+  line-height: 18px;
+  color: #000;
+  margin-left: auto;
+  line-height: 1;
+}
+
+.mobile__breadcrumb.rotate i {
+  transform: rotate(-90deg);
+}
+
+.mobile__breadcrumb i {
+  transition: all 0.5s ease;
+  transform: rotate(90deg);
+  margin-left: 10px;
+}
